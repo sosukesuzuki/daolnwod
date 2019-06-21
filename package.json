@@ -1,0 +1,20 @@
+{
+  "name": "daolnwod",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Sosuke Suzuki <aosukeke@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "format": "prettier --write \"{,src/**/}*.{js,md,json}\"",
+    "lint": "eslint ./ --ext ts",
+    "lint:fix": "yarn lint --fix"
+  },
+  "files": [
+    "index.js"
+  ],
+  "devDependencies": {
+    "eslint": "^5.16.0",
+    "eslint-plugin-prettier": "^3.1.0",
+    "prettier": "^1.18.2"
+  }
+}
