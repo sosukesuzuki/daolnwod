@@ -1,7 +1,7 @@
-const request = require("request");
-const fs = require("fs");
+import request from "request";
+import fs from "fs";
 
-function writeFile(output, buf) {
+function writeFile(output: string, buf: any) {
   return new Promise((resolve, reject) => {
     fs.writeFile(output, buf, error => {
       if (error) {
@@ -12,23 +12,23 @@ function writeFile(output, buf) {
   });
 }
 
-function getImageBuf(imageUrl) {
+function getImageBuf(imageUrl: string) {
   const options = {
     url: imageUrl,
     method: "get",
     encoding: null
   };
   return new Promise((resolve, reject) => {
-    request(options, (error, res, body) => {
+    request(options, (error, res) => {
       if (error != null) {
         reject(error);
       }
-      resolve(body);
+      resolve(res.body);
     });
   });
 }
 
-async function daolnwod(url, output) {
+export default async function daolnwod(url: string, output: string) {
   if (typeof url !== "string") {
     throw new Error("url is must be string");
   }
@@ -44,5 +44,3 @@ async function daolnwod(url, output) {
     throw error;
   }
 }
-
-module.exports = daolnwod;

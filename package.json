@@ -7,14 +7,21 @@
   "scripts": {
     "format": "prettier --write \"{,src/**/}*.{js,md,json}\"",
     "lint": "eslint ./ --ext ts",
-    "lint:fix": "yarn lint --fix"
+    "lint:fix": "yarn lint --fix",
+    "clean": "rimraf ./build",
+    "build": "yarn clean && tsc",
+    "build:watch": "yarn build -w"
   },
   "files": [
     "index.js"
   ],
   "devDependencies": {
+    "@types/node": "^12.0.10",
+    "@types/request": "^2.48.1",
     "eslint": "^5.16.0",
     "eslint-plugin-prettier": "^3.1.0",
-    "prettier": "^1.18.2"
+    "prettier": "^1.18.2",
+    "rimraf": "^2.6.3",
+    "typescript": "^3.5.2"
   }
 }
