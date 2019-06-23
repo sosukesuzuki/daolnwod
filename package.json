@@ -1,9 +1,12 @@
 {
   "name": "daolnwod",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "build",
   "author": "Sosuke Suzuki <aosukeke@gmail.com>",
   "license": "MIT",
+  "files": [
+    "build/**/*"
+  ],
   "scripts": {
     "format": "prettier --write \"{,src/**/}*.{ts,md,json}\"",
     "lint": "eslint ./ --ext ts",
@@ -12,9 +15,6 @@
     "build": "yarn clean && tsc",
     "build:watch": "yarn build -w"
   },
-  "files": [
-    "index.js"
-  ],
   "devDependencies": {
     "@types/node": "^12.0.10",
     "@types/request": "^2.48.1",
