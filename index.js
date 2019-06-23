@@ -28,7 +28,7 @@ function getImageBuf(imageUrl) {
   });
 }
 
-function daolnwod(url, output) {
+async function daolnwod(url, output) {
   if (typeof url !== "string") {
     throw new Error("url is must be string");
   }
@@ -37,13 +37,12 @@ function daolnwod(url, output) {
     throw new Error("output is must be string");
   }
 
-  return getImageBuf(url)
-    .then(buf => {
-      writeFile(output, buf);
-    })
-    .catch(error => {
-      throw error;
-    });
+  const buf = await getImageBuf(url);
+  try {
+    await writeFile(output, buf);
+  } catch (error) {
+    throw error;
+  }
 }
 
 module.exports = daolnwod;
