@@ -5,7 +5,7 @@
   "author": "Sosuke Suzuki <aosukeke@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "format": "prettier --write \"{,src/**/}*.{js,md,json}\"",
+    "format": "prettier --write \"{,src/**/}*.{ts,md,json}\"",
     "lint": "eslint ./ --ext ts",
     "lint:fix": "yarn lint --fix",
     "clean": "rimraf ./build",
