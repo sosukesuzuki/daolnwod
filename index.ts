@@ -37,8 +37,8 @@ export default async function daolnwod(url: string, output: string) {
     throw new Error("output is must be string");
   }
 
-  const buf = await getImageBuf(url);
   try {
+    const buf = await getImageBuf(url);
     await writeFile(output, buf);
   } catch (error) {
     throw error;
