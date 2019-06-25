@@ -2,6 +2,12 @@
 
 Download images from url.
 
+## Instalation
+
+```sh
+$ npm install --save daolnwod
+```
+
 ## Usage
 
 If you want to download my icon image( https://avatars0.githubusercontent.com/u/14838850?s=460&v=4 ), you can write like below:
