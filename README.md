@@ -2,7 +2,7 @@
 
 Download images from url.
 
-## Instalation
+## Installation
 
 ```sh
 $ npm install --save daolnwod
