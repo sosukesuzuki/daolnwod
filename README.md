@@ -1,5 +1,8 @@
 # daolnwod
 
+[![npm version](https://badge.fury.io/js/daolnwod.svg)](https://badge.fury.io/js/daolnwod)
+[![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
+
 Download images from url.
 
 ## Installation
