@@ -7,6 +7,10 @@
   "files": [
     "build/**/*"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sosukesuzuki/daolnwod.git"
+  },
   "scripts": {
     "format": "prettier --write \"{,src/**/}*.{ts,md,json}\"",
     "lint": "eslint ./ --ext ts",
